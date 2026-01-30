@@ -28,7 +28,7 @@ CVAPI(ExceptionStatus) imgproc_Subdiv2D_delete(cv::Subdiv2D *obj)
 CVAPI(ExceptionStatus) imgproc_Subdiv2D_initDelaunay(cv::Subdiv2D *obj, CvRect rect)
 {
     BEGIN_WRAP
-    obj->initDelaunay(rect);
+    obj->initDelaunay((cv::Rect)rect);
     END_WRAP
 }
 

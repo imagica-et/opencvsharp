@@ -1,4 +1,8 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
+
+if(POLICY CMP0177)
+	cmake_policy(SET CMP0177 NEW)
+endif()
 
 include_directories(${OpenCV_INCLUDE_DIR})
 IF(!EMSCRIPTEN)
@@ -46,5 +50,8 @@ if(OpenCV_FOUND)
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib/static
+	)
+	install(FILES $<TARGET_FILE:OpenCvSharpExtern>
+		DESTINATION "${CMAKE_SOURCE_DIR}/../../../FilmMonitor.Core/Resources/bin/osx/arm64"
 	)
 endif(OpenCV_FOUND)
