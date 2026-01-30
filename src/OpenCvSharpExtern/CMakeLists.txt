@@ -51,7 +51,4 @@ if(OpenCV_FOUND)
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib/static
 	)
-	install(FILES $<TARGET_FILE:OpenCvSharpExtern>
-		DESTINATION "${CMAKE_SOURCE_DIR}/../../../FilmMonitor.Core/Resources/bin/osx/arm64"
-	)
 endif(OpenCV_FOUND)
