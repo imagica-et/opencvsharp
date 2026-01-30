@@ -124,3 +124,5 @@ UpgradeLog*.XML
 /test/OpenCvSharp.Tests/*.dll
 Help
 /tesseract_files
+
+/src/install
